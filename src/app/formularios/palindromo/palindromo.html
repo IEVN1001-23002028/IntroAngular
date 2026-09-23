@@ -1,0 +1,70 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-6">
+
+      <h2 class="pt-4">Analizador de palíndromos</h2>
+
+      <div class="form-group pt-3">
+
+        <label>Ingrese una frase:</label>
+
+        <input
+          [(ngModel)]="frase"
+          name="frase"
+          type="text"
+          class="form-control"
+          placeholder="Ingrese una frase">
+
+      </div>
+
+      <br>
+
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="analizar()">
+
+        Analizar
+
+      </button>
+
+    </div>
+
+
+    <div class="col-6 pt-4">
+
+      <h3>Resultados</h3>
+
+      <p>
+        Número de vocales: {{ cantidadVocales }}
+      </p>
+
+      <p>
+        Vocales:
+        <span *ngFor="let vocal of vocalesEncontradas">
+          {{ vocal }}
+        </span>
+      </p>
+
+      <p>
+        Número de consonantes: {{ cantidadConsonantes }}
+      </p>
+
+      <p>
+        Consonantes:
+        <span *ngFor="let consonante of consonantesEncontradas">
+          {{ consonante }}
+        </span>
+      </p>
+
+      <p>
+        {{ mensajePalindromo }}
+      </p>
+
+    </div>
+
+  </div>
+
+</div>

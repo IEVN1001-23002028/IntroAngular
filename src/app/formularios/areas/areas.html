@@ -1,0 +1,183 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-6">
+
+      <h2 class="pt-4">Calculadora de áreas</h2>
+
+      <div class="form-group pt-4">
+
+        <label>Selecciona una figura:</label>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="figura"
+            [(ngModel)]="figura"
+            value="triangulo"
+            id="triangulo">
+
+          <label class="form-check-label" for="triangulo">
+            Triángulo
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="figura"
+            [(ngModel)]="figura"
+            value="circulo"
+            id="circulo">
+
+          <label class="form-check-label" for="circulo">
+            Círculo
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="figura"
+            [(ngModel)]="figura"
+            value="rectangulo"
+            id="rectangulo">
+
+          <label class="form-check-label" for="rectangulo">
+            Rectángulo
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="figura"
+            [(ngModel)]="figura"
+            value="pentagono"
+            id="pentagono">
+
+          <label class="form-check-label" for="pentagono">
+            Pentágono
+          </label>
+        </div>
+
+      </div>
+
+
+      <div *ngIf="figura === 'triangulo'" class="pt-4">
+
+        <label>Base:</label>
+
+        <input
+          [(ngModel)]="base"
+          name="base"
+          type="text"
+          class="form-control"
+          placeholder="Ingrese la base">
+
+        <br>
+
+        <label>Altura:</label>
+
+        <input
+          [(ngModel)]="altura"
+          name="altura"
+          type="text"
+          class="form-control"
+          placeholder="Ingrese la altura">
+
+      </div>
+
+
+      <div *ngIf="figura === 'circulo'" class="pt-4">
+
+        <label>Radio:</label>
+
+        <input
+          [(ngModel)]="radio"
+          name="radio"
+          type="text"
+          class="form-control"
+          placeholder="Ingrese el radio">
+
+      </div>
+
+
+      <div *ngIf="figura === 'rectangulo'" class="pt-4">
+
+        <label>Base:</label>
+
+        <input
+          [(ngModel)]="base"
+          name="base"
+          type="text"
+          class="form-control"
+          placeholder="Ingrese la base">
+
+        <br>
+
+        <label>Altura:</label>
+
+        <input
+          [(ngModel)]="altura"
+          name="altura"
+          type="text"
+          class="form-control"
+          placeholder="Ingrese la altura">
+
+      </div>
+
+
+      <div *ngIf="figura === 'pentagono'" class="pt-4">
+
+        <label>Lado:</label>
+
+        <input
+          [(ngModel)]="lado"
+          name="lado"
+          type="text"
+          class="form-control"
+          placeholder="Ingrese el lado">
+
+        <br>
+
+        <label>Apotema:</label>
+
+        <input
+          [(ngModel)]="apotema"
+          name="apotema"
+          type="text"
+          class="form-control"
+          placeholder="Ingrese el apotema">
+
+      </div>
+
+      <br>
+
+      <button
+        *ngIf="figura !== ''"
+        (click)="calcularArea()"
+        type="button"
+        class="btn btn-primary">
+
+        Calcular área
+
+      </button>
+
+    </div>
+
+
+    <div class="col-6 pt-4">
+
+      <h2>Resultado: {{ resultado }}</h2>
+
+    </div>
+
+  </div>
+
+</div>

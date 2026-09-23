@@ -5,9 +5,23 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { HeroesList } from './heroes/heroes-list/heroes-list';
 import { HeroesFilterPipe } from './heroes/heroes-filter-pipe';
+import { DistanciaComponent } from './formularios/distancia/distancia';
+import { OperasBas } from './formularios/operas-bas/operas-bas';
+import { Areas } from './formularios/areas/areas';
+import { Usuario } from './formularios/usuario/usuario';
+import { Palindromo } from './formularios/palindromo/palindromo';
 
 @NgModule({
-  declarations: [App, HeroesList, HeroesFilterPipe],
+  declarations: [
+    App,
+    HeroesList,
+    HeroesFilterPipe,
+    DistanciaComponent,
+    OperasBas,
+    Areas,
+    Usuario,
+    Palindromo,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],

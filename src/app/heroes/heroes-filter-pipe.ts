@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { IHeroes } from './heroes';
 
 @Pipe({
   name: 'heroesFilter',
@@ -10,6 +11,6 @@ export class HeroesFilterPipe implements PipeTransform {
     let filter:string=args?args.toLocaleLowerCase():'';
 
     return filter?value.filter((hero:IHeroes)=>
-      herp.nombre.toLocaleLowerCase().indexOf(filter)!==-1):value;
+      hero.nombre.toLocaleLowerCase().indexOf(filter)!==-1):value;
   }
 }
