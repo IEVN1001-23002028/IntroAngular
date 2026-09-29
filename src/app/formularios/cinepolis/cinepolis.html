@@ -1,0 +1,67 @@
+<div class="cinepolis-contenedor">
+
+  <h1 class="titulo">Cinepolis</h1>
+
+  <div class="paneles">
+
+    <fieldset class="panel entradas">
+      <legend>Entradas</legend>
+
+      <div class="fila">
+        <label>Nombre:</label>
+        <input type="text" [(ngModel)]="Nombre">
+      </div>
+
+      <div class="fila">
+        <label>Cantidad de compradores:</label>
+        <input type="number" [(ngModel)]="Compradores">
+      </div>
+
+      <div class="fila tarjeta">
+        <label>Cuentas con tarjeta de puntos?</label>
+
+        <div class="opciones">
+          <label>
+            <input type="radio" name="cinepolito" [value]="true" [(ngModel)]="TarjetaCine">Sí</label>
+
+          <label>
+            <input type="radio" name="cinepolito" [value]="false" [(ngModel)]="TarjetaCine">No</label>
+        </div>
+      </div>
+
+      <p class="ayuda"> Si cuentas con tarjeta obtendrás un 10% adicional sobre el valor total.</p>
+
+      <div class="fila">
+        <label>Cantidad Boletos:</label>
+        <input type="number" [(ngModel)]="CantidadBoletos">
+      </div>
+    </fieldset>
+
+    <fieldset class="panel salidas">
+      <legend>Salidas</legend>
+
+      <div class="fila">
+        <label>Valor a pagar:</label>
+        <input type="number" [value]="CostoPagar" readonly>
+      </div>
+    </fieldset>
+
+  </div>
+<br><br>
+  <fieldset class="panel acciones">
+    <legend>Acciones</legend>
+
+    <button (click)="Procesar()">
+      Procesar boletos
+    </button>
+
+    <button (click)="Limpiar()">
+      Salir
+    </button>
+  </fieldset>
+
+  @if (mensaje != '') {
+    <p class="mensaje">{{ mensaje }}</p>
+  }
+
+</div>

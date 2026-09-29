@@ -1,0 +1,210 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cinepolis-contenedor {
+  min-height: 100vh;
+  width: 100%;
+
+  background-image: url('/Cinepolis-fondo2.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #0D28B4;
+
+  color: white;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.titulo {
+  width: fit-content;
+  margin: 0 auto 30px;
+  padding: 6px 28px;
+
+  background: #eee6cf;
+  color: #333;
+
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 28px;
+
+  border: 2px solid #666;
+}
+
+.paneles {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.panel {
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  padding: 20px;
+}
+
+.panel legend {
+  padding: 0 12px;
+
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.entradas {
+  width: 420px;
+  transform: translateX(-240px);
+}
+
+.salidas {
+  width: 330px;
+  transform: translateX(100px)
+}
+
+.fila {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 15px;
+}
+
+.fila > label:first-child {
+  width: 210px;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 150px;
+
+  padding: 7px 9px;
+
+  background: #f2f2f2;
+
+  border: 2px solid #42547f;
+
+  font-size: 16px;
+
+  outline: none;
+}
+
+.opciones {
+  display: flex;
+  gap: 15px;
+}
+
+.opciones label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ayuda {
+  margin: -5px 0 18px 0;
+
+  font-size: 13px;
+  font-style: italic;
+
+  opacity: 0.85;
+}
+
+.logo-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 35px auto 25px;
+
+  transform: skew(-7deg);
+}
+
+.logo-principal {
+  font-family: Arial Black, Arial, sans-serif;
+  font-size: 66px;
+  font-style: italic;
+  font-weight: bold;
+
+  letter-spacing: -5px;
+
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.logo-subtitulo {
+  margin-top: -5px;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  letter-spacing: 5px;
+}
+
+.acciones {
+  width: 350px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+button {
+  min-width: 120px;
+
+  padding: 10px 18px;
+  margin: 5px;
+
+  background: #e8e8e8;
+  color: #333;
+
+  border: 2px solid #aaa;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+button:hover {
+  background: white;
+}
+
+.mensaje {
+  width: fit-content;
+
+  margin: 20px auto 0;
+
+  padding: 10px 18px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  font-weight: bold;
+}
+
+@media (max-width: 850px) {
+
+  .paneles {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .entradas,
+  .salidas {
+    width: 90%;
+    max-width: 460px;
+  }
+
+  .fila {
+    flex-wrap: wrap;
+  }
+
+  .logo-principal {
+    font-size: 44px;
+  }
+}
